@@ -814,6 +814,186 @@ dd {
 }
 
 /* ==========================================================================
+   Our Work
+   ========================================================================== */
+.work {
+  background: var(--ivory);
+}
+.work__list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(5rem, 10vw, 9rem);
+}
+.project {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: clamp(2rem, 5vw, 5.5rem);
+  align-items: center;
+}
+.project--flip {
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+}
+.project--flip .project__cover {
+  order: 2;
+}
+.project__cover {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+.project__cover .img-frame {
+  aspect-ratio: 16 / 10;
+  box-shadow: 0 40px 80px -45px rgba(48, 35, 29, 0.55);
+}
+.project--flip .project__cover .img-frame {
+  aspect-ratio: 4 / 5;
+}
+.project--flip .project__cover img {
+  object-position: 50% 20%;
+}
+.project__cover:hover .img-frame img,
+.project__details button:hover .img-frame img {
+  transform: scale(1.04);
+}
+.project__zoom {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  padding: 0.55rem 0.95rem;
+  background: rgba(32, 28, 25, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-size: 0.6rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+}
+.project__cover:hover .project__zoom,
+.project__cover:focus-visible .project__zoom {
+  opacity: 1;
+  transform: none;
+}
+.project__num {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--brass);
+}
+.project__title {
+  margin-bottom: 1.25rem;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  line-height: 1.05;
+  color: var(--espresso);
+}
+.project__meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.project__meta dt {
+  margin-bottom: 0.3rem;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--taupe);
+}
+.project__meta dd {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.3;
+  color: var(--espresso);
+}
+.project__details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+.project__details button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  cursor: zoom-in;
+}
+.project__details .img-frame {
+  aspect-ratio: 1 / 1;
+}
+.project__details span {
+  display: block;
+  margin-top: 0.55rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--taupe);
+}
+.work__cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem 3rem;
+  margin-top: clamp(4.5rem, 8vw, 7rem);
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+}
+.work__cta p {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  line-height: 1.25;
+  color: var(--espresso);
+}
+.work__cta em {
+  color: var(--taupe);
+}
+@media (max-width: 860px) {
+  .project,
+  .project--flip {
+    grid-template-columns: 1fr;
+  }
+  .project--flip .project__cover {
+    order: 0;
+  }
+  .project__cover .img-frame,
+  .project--flip .project__cover .img-frame {
+    aspect-ratio: 4 / 5;
+  }
+  .project__cover img {
+    object-position: 60% 50%;
+  }
+  .project__zoom {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 480px) {
+  .project__meta {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+}
+
+/* ==========================================================================
    Showcase
    ========================================================================== */
 .showcase {

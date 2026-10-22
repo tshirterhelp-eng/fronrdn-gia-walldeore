@@ -3,6 +3,7 @@ import Nav from './components/Nav.jsx';
 import Hero from './components/Hero.jsx';
 import Intro from './components/Intro.jsx';
 import Collections from './components/Collections.jsx';
+import OurWork from './components/OurWork.jsx';
 import Showcase from './components/Showcase.jsx';
 import Inspiration from './components/Inspiration.jsx';
 import WhyGia from './components/WhyGia.jsx';
@@ -25,6 +26,7 @@ export default function App() {
         <Hero />
         <Intro />
         <Collections onExplore={setInterest} />
+        <OurWork />
         <Showcase />
         <Inspiration />
         <WhyGia />

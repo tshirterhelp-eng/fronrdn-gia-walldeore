@@ -11,6 +11,7 @@
 export const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'Collections', href: '#collections' },
+  { label: 'Our Work', href: '#work' },
   { label: 'About Us', href: '#about' },
   { label: 'Inspiration', href: '#inspiration' },
   { label: 'Contact', href: '#contact' },
@@ -133,5 +134,54 @@ export const values = [
   {
     title: 'For every interior',
     text: 'From warm traditional homes to pared-back contemporary spaces — wall decor to suit different styles.',
+  },
+];
+
+/**
+ * Our Work — GIA pieces shown installed in a room, each with close-up details.
+ * Titles describe the artwork itself. Add real installations by appending
+ * entries here (put photos in /public/images); `meta` values should be filled
+ * only with verified details (space, size, finish, city).
+ */
+export const projects = [
+  {
+    id: 'moonrise',
+    title: 'Golden Tree & Moonrise',
+    summary:
+      'A panoramic backlit landscape across the main sofa wall: a gilded tree, layered snow-capped peaks, a full golden moon and a flight of birds, all reflected in a still lake edged with light.',
+    meta: [
+      { label: 'Space', value: 'Living room feature wall' },
+      { label: 'Piece', value: 'Sculptural landscape wall art' },
+      { label: 'Lighting', value: 'Warm LED back-glow' },
+    ],
+    cover: {
+      src: '/images/hero-living-room.webp',
+      alt: 'Living room with a panoramic backlit wall artwork of a golden tree, mountains, moon and lake above a cream sofa',
+    },
+    details: [
+      { src: '/images/art-tree.webp', alt: 'Close-up of the gilded tree and its layered base', caption: 'The gilded tree' },
+      { src: '/images/art-moon-birds.webp', alt: 'Golden moon disc with birds over the mountain peaks', caption: 'Moon & birds' },
+      { src: '/images/art-reflection.webp', alt: 'Lake reflection with a halo of warm light along the edge', caption: 'Lit lake edge' },
+    ],
+  },
+  {
+    id: 'deer-lake',
+    title: 'Deer by the Lake',
+    summary:
+      'A taller composition for a lounge wall: a flowering golden tree sheltering a stag and fawn on a rocky ledge, with pine forest, moonrise and a glowing reflection that spills below the horizon line.',
+    meta: [
+      { label: 'Space', value: 'Lounge feature wall' },
+      { label: 'Piece', value: 'Sculptural landscape wall art' },
+      { label: 'Lighting', value: 'Warm LED back-glow' },
+    ],
+    cover: {
+      src: '/images/work-deer-room.webp',
+      alt: 'Lounge with a backlit wall artwork of a golden tree, a stag, mountains and moon above a cream sectional sofa',
+    },
+    details: [
+      { src: '/images/work-deer-detail.webp', alt: 'Close-up of the stag and fawn silhouettes beside the lake', caption: 'Stag & fawn' },
+      { src: '/images/work-deer-tree.webp', alt: 'The flowering golden tree on its rocky ledge', caption: 'Flowering tree' },
+      { src: '/images/work-deer-lake.webp', alt: 'Pine trees reflected in the glowing lake', caption: 'Forest reflection' },
+    ],
   },
 ];
